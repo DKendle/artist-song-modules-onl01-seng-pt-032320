@@ -5,7 +5,7 @@ class Artist
   attr_reader :songs
 
   extend Memorable
-
+  include Paramable
   @@all = []
 
   def initialize
