@@ -6,19 +6,19 @@ class Artist
 
   extend Memorable
   include Paramable
-  @@all = []
+  @@songs = []
 
   def initialize
-    @@all << self
+    self.class.all << self
     @songs = []
   end
 
   def self.find_by_name(name)
-    @@all.detect{|a| a.name == name}
+    @@songs.detect{|a| a.name == name}
   end
 
   def self.all
-    @@all
+    @@songs
   end
 
   def add_song(song)
